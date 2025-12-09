@@ -2,19 +2,76 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=mail" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts@latest/fonts.css">
-    <script src='index.js' type='module' async></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicholas Brandt</title>
+    <link rel="icon" type="image/jpg" href="profile.jpg">
 </head>
 
 <body>
+    <div id="background-picture"></div>
+    <section class="horizontal">
+        <div>
+            <h1>Nicholas Brandt</h1>
+            I am a PhD student in the group of Dennis Hofheinz at ETH Zurich.
+            My research interests range from complexity theory to cryptography, recently focusing also on applied
+            cryptography.
+
+        </div>
+        <img id="profile-picture" src="profile.jpg"></img>
+    </section>
+    <section class="icons">
+        <a class="fa-solid fa-envelope" href="mailto:contact@nicholasbrandt.de"></a>
+        <a class="fab fa-github" href="https://github.com/nicholas-brandt"></a>
+        <a class="fab fa-linkedin" href="https:/linkedin.com/in/nicholas-brandt-a0001a347"></a>
+    </section>
     <section>
-        <h1>Math problems</h1>
+        <h1>Publications</h1>
         <ul>
             <li>
-                Let \(\gamma : \mathbb{N} \to [0,1]\) and let \(\sigma(\kappa) \coloneqq \sum_{j=1}^\kappa \gamma(j)\).
-                Prove that \(\sum_{j=1}^n \gamma(j) \sum_{\kappa=1}^j \frac{2^\kappa}{e^{\sigma(j) - \sigma(j-k)}} \leq_{\mathsf{io}} \frac{2^n}{n\ln(n)}\).
+                Nicholas Brandt. Constrained Verifiable Random Functions Without Obfuscation and Friends. TCC 2025.
+                <a href="https://eprint.iacr.org/2025/1045.pdf">Full version</a>
+            </li>
+            <li>
+                Nicholas Brandt. Lower Bounds for Levin–Kolmogorov Complexity. TCC 2024.
+                <a href="https://eprint.iacr.org/2024/687.pdf">Full version</a>
+            </li>
+            <li>
+                Nicholas Brandt, Sven Maier, Tobias Müller, Jörn Müller-Quade. On the Correlation Complexity of MPC with
+                Cheater Identification. Financial Crypto 2023.
+                <a href="https://eprint.iacr.org/2020/153.pdf">Full version</a>
+            </li>
+            <li>
+                Nicholas Brandt, Dennis Hofheinz, Julia Kastner, Akin Ünal. The Price of Verifiability: Lower Bounds for
+                Verifiable Random Functions. TCC 2022.
+                <a href="https://eprint.iacr.org/2022/762.pdf">Full version</a>
+            </li>
+        </ul>
+        A full list of publications can be found at <a href="https://dblp.org/pid/294/0788.html">dblp</a> and <a
+            href="https://orcid.org/0000-0002-5120-6346">orcid</a>.
+    </section>
+    <section>
+        <h1>Software Projects</h1>
+        <ul>
+            <li>
+                <a href="https://github.com/nicholas-brandt/graph-elements">Graph Elements</a>: A VSCode extension for
+                visualizing and manipulating graphs.
+            </li>
+            <li>
+                <a href="https://github.com/nicholas-brandt/texman">Texman</a>: Runs a VSCode in a TexLive container on
+                alpine linux.
             </li>
         </ul>
         </div>

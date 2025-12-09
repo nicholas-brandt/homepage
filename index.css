@@ -1,32 +1,95 @@
+:root {
+    --primary-color: #f8f8f8;
+    --secondary-color: #acacac;
+}
+
 body {
-    font-family: "Computer Modern", sans-serif;
+    /* font-family: "Computer Modern", sans-serif; */
+    font-family: Noto Sans, sans-serif;
     display: flex;
     flex-direction: column;
     margin: 0;
-    height: 100vh;
+    padding-bottom: 40px;
+    overflow-y: auto;
+}
+
+#background-picture {
+    flex: 0 0 auto;
+    height: 120px;
+    border-bottom: 1px solid var(--secondary-color);
+    background: url("background.jpg") no-repeat center / cover;
+    margin-bottom: 20px;
+}
+
+#profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--secondary-color);
+    margin-left: 10px;
 }
 
 section {
     flex: 0 0 auto;
-    margin: 20px 5%;
+    margin: 0 calc(10% + 40px);
+
+    h1 {
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 1px;
+            background-color: var(--secondary-color);
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            flex-grow: 1;
+            height: 1px;
+            background-color: var(--secondary-color);
+        }
+    }
+
+    li {
+        margin: 5px 0;
+    }
+
+    &.horizontal {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
 }
 
-li {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 16px;
-    box-sizing: border-box;
+:link {
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
 }
 
-li::before {
-    content: "";
-    position: absolute;
-    top: -6px;
-    left: -6px;
-    right: -6px;
-    bottom: -6px;
-    border-radius: 14px;
-    background: linear-gradient(to bottom, #e0e0e0, #f5f5f5);
-    z-index: -1;
+.icons {
+    justify-content: center;
+    display: flex;
+    padding: 20px 0 0;
+
+    :link {
+        margin: 0 15px;
+        font-size: 28px;
+        flex: 0 0 auto;
+        font-weight: normal;
+    }
+}
+
+@media (max-width: 640px) {
+    section.horizontal {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
 }
