@@ -20,13 +20,6 @@
     <title>Nicholas Brandt</title>
     <link rel="icon" type="image/jpg" href="profile.jpg">
     <script src="math.js" type="module" async></script>
-    <script>
-        document.querySelector("#mail").addEventListener("click", event => {
-            event.stopImmediatePropagation();
-            event.preventDefault();
-            open(`mailto:${atob("Y29udGFjdEBuaWNob2xhc2JyYW5kdC5kZQ==")}`);
-        });
-    </script>
 </head>
 
 <body>
@@ -96,6 +89,14 @@
         </ul>
         </div>
     </section>
+
+    <script>
+        document.querySelector("#mail").addEventListener("click", event => {
+            event.stopImmediatePropagation();
+            event.preventDefault();
+            open(`mailto:${atob("Y29udGFjdEBuaWNob2xhc2JyYW5kdC5kZQ==")}`, "_self");
+        });
+    </script>
 </body>
 
 </html>
