@@ -20,6 +20,13 @@
     <title>Nicholas Brandt</title>
     <link rel="icon" type="image/jpg" href="profile.jpg">
     <script src="math.js" type="module" async></script>
+    <script>
+        document.querySelector("#mail").addEventListener("click", event => {
+            event.stopImmediatePropagation();
+            event.preventDefault();
+            open(`mailto:${atob("Y29udGFjdEBuaWNob2xhc2JyYW5kdC5kZQ==")}`);
+        });
+    </script>
 </head>
 
 <body>
@@ -35,7 +42,7 @@
         <img id="profile-picture" src="profile.jpg"></img>
     </section>
     <section class="icons">
-        <a class="fa-solid fa-envelope" href="mailto:contact@nicholasbrandt.de"></a>
+        <a id="mail" class="fa-solid fa-envelope" href="mailto:spam@nicholasbrandt.de"></a>
         <a class="fab fa-github" href="https://github.com/nicholas-brandt"></a>
         <a class="fab fa-linkedin" href="https://linkedin.com/in/nicholas-brandt-a0001a347"></a>
     </section>
